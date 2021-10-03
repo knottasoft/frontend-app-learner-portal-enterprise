@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -69,8 +70,8 @@ const SavedForLaterCourseCard = (props) => {
         },
         children: (
           <div role="menuitem">
-            Move to In Progress
-            <span className="sr-only">for {title}</span>
+            Переместить в раздел "В работе"
+            <span className="sr-only">{title}</span>
           </div>
         ),
       },

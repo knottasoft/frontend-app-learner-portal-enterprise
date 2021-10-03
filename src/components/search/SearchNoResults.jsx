@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useCallback } from 'react';
 import { StatusAlert } from '@edx/paragon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,9 +14,9 @@ const SearchNoResults = () => {
           <FontAwesomeIcon icon={faSearchMinus} size="2x" />
         </div>
         <div>
-          No courses were found to match your search results.
+            Не найдено курсов, соответствующих результатам вашего поиска.
           <br />
-          Check out some popular courses below.
+            Ознакомьтесь с некоторыми популярными курсами ниже.
         </div>
       </div>
     ),

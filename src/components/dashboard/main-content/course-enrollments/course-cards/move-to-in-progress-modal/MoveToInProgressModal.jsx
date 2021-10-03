@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Modal, StatefulButton } from '@edx/paragon';
@@ -8,8 +9,8 @@ import MoveToInProgressModalContext from './MoveToInProgressModalContext';
 import ModalBody from './ModalBody';
 import { updateCourseCompleteStatusRequest } from '../mark-complete-modal/data/service';
 
-export const MARK_MOVE_TO_IN_PROGRESS_DEFAULT_LABEL = 'Move course to In Progress';
-export const MARK_MOVE_TO_IN_PROGRESS_PENDING_LABEL = 'Moving course to "In Progress"...';
+export const MARK_MOVE_TO_IN_PROGRESS_DEFAULT_LABEL = 'Переместить курс в раздел "В процессе"';
+export const MARK_MOVE_TO_IN_PROGRESS_PENDING_LABEL = 'Перемещение курса в "В процессе"...';
 
 const initialState = {
   confirmButtonState: 'default',
@@ -65,7 +66,7 @@ const MoveToInProgressModal = ({
       }}
     >
       <Modal
-        title="Move course to &quot;In Progress&quot;"
+        title="Переместите курс в раздел &quot;В процессе&quot;"
         body={<ModalBody />}
         buttons={[
           <StatefulButton

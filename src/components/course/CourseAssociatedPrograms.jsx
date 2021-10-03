@@ -1,3 +1,4 @@
+// TODO: Lang support
 import React, { useContext } from 'react';
 import { Hyperlink } from '@edx/paragon';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
@@ -11,7 +12,7 @@ export default function CourseAssociatedPrograms() {
 
   return (
     <div className="associated-programs mb-5">
-      <h3>Associated Programs</h3>
+      <h3>Связанные программы</h3>
       <ul className="pl-0 list-unstyled">
         {course.programs.map(program => (
           <li key={program.uuid} className="mb-3 row">

@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -14,12 +15,12 @@ const Notification = props => (
           >
             {props.name}
           </a>
-          {' is due '}
+          {' должен быт сдан с '}
           <span className="font-weight-bold">
             {moment(props.date).fromNow()}
           </span>
-          {' on '}
-          {moment(props.date).format('ddd MMMM D, YYYY')}
+          {' по '}
+          {moment(props.date).format('DD.MM.YYYY')}
         </div>
       </div>
     </div>

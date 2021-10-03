@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import Truncate from 'react-truncate';
@@ -111,7 +112,7 @@ const SearchCourseCard = ({ hit, isLoading }) => {
             {isLoading ? (
               <Skeleton duration={0} data-testid="content-type-loading" />
             ) : (
-              <span className="text-muted">Course</span>
+              <span className="text-muted">Курс</span>
             )}
           </Card.Footer>
         </Card>

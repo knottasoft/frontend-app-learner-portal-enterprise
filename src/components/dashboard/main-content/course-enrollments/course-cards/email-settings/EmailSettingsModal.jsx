@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -117,7 +118,7 @@ class EmailSettingsModal extends Component {
 
     return (
       <Modal
-        title="Email settings"
+        title="Настройки электронной почты"
         body={(
           <>
             {error && (
@@ -129,7 +130,7 @@ class EmailSettingsModal extends Component {
                       <FontAwesomeIcon className="mr-3" icon={faExclamationTriangle} />
                     </div>
                     <div>
-                      An error occurred while saving your email settings. Please try again.
+                      При сохранении настроек электронной почты произошла ошибка. Пожалуйста, попробуйте еще раз.
                     </div>
                   </div>
                 )}
@@ -147,8 +148,8 @@ class EmailSettingsModal extends Component {
               />
               {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
               <label className="form-check-label ml-2 font-weight-normal" htmlFor={`email-settings-${courseRunId}`}>
-                Receive course emails such as reminders, schedule updates, and
-                other critical announcements.
+                Получайте электронные сообщения о курсе, такие как напоминания, обновления расписания и
+                другие важные объявления.
               </label>
             </div>
           </>
@@ -157,9 +158,9 @@ class EmailSettingsModal extends Component {
         buttons={[
           <StatefulButton
             labels={{
-              default: 'Save',
-              pending: 'Saving',
-              complete: 'Saved',
+              default: 'Сохранить',
+              pending: 'Сохранение',
+              complete: 'Сохранено',
             }}
             disabledStates={this.getDisabledStates()}
             className="save-email-settings-btn btn-primary btn-brand-primary"

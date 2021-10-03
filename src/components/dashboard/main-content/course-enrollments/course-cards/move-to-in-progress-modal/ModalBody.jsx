@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 
 import ModalError from './ModalError';
@@ -13,14 +14,14 @@ const ModalBody = () => {
     <>
       {confirmError && <ModalError />}
       <p className="m-0">
-        Are you sure you want to move
+          Вы уверены, что хотите изменить статус
         {' '}
         <a href={courseLink}>{courseTitle}</a>
         {' '}
-        to &quot;In Progress&quot;? The course will show up in your &quot;In Progress&quot; section.
+        на &quot;В процессе&quot;? Курс появится в вашем разделе &quot;В процессе&quot;.
       </p>
       <p className="mt-2">
-        As long as your license is valid, you can resume the course by clicking &quot;Move to In Progress&quot;.
+          Пока ваша лицензия действительна, вы можете возобновить курс, нажав &quot;В процессе&quot;.
       </p>
     </>
   );

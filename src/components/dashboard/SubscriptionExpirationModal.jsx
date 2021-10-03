@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import Cookies from 'universal-cookie';
 import moment from 'moment';
@@ -14,8 +15,8 @@ import {
 } from '../../config/constants';
 
 export const MODAL_DIALOG_CLASS_NAME = 'subscription-expiration';
-export const SUBSCRIPTION_EXPIRED_MODAL_TITLE = 'Your subscription has expired';
-export const SUBSCRIPTION_EXPIRING_MODAL_TITLE = 'Your subscription is expiring';
+export const SUBSCRIPTION_EXPIRED_MODAL_TITLE = 'Срок действия вашей подписки истек';
+export const SUBSCRIPTION_EXPIRING_MODAL_TITLE = 'Срок действия вашей подписки истекает';
 
 const SubscriptionExpirationModal = () => {
   const {
@@ -37,7 +38,7 @@ const SubscriptionExpirationModal = () => {
   };
 
   const renderContactText = () => {
-    const contactText = 'contact your learning manager';
+    const contactText = 'свяжитесь с вашим менеджером по обучению';
     if (contactEmail) {
       return (
         <MailtoLink to={contactEmail} className="font-weight-bold">{contactText}</MailtoLink>
@@ -51,7 +52,7 @@ const SubscriptionExpirationModal = () => {
     return (
       <>
         <a href={`${config.LMS_BASE_URL}/u/${username}`} className="font-weight-bold">
-          download your completed certificates
+            скачать готовые сертификаты
         </a>
       </>
     );
@@ -60,19 +61,19 @@ const SubscriptionExpirationModal = () => {
   const renderBody = () => (
     <>
       <p>
-        Your company&#39;s access to your edX learning portal is expiring in
-        <span className="font-weight-bold">{` ${daysUntilExpiration} `}</span>
-        days. After it expires you will only have audit access to your courses.
+          Срок действия доступа вашей компании к учебному порталу ЦОПП СК истекает через
+          <span className="font-weight-bold">{`${daysUntilExpiration}`}</span>
+          дней. После истечения этого срока у вас будет только аудиторский доступ к вашим курсам.
       </p>
       <p>
-        If you are currently taking courses, plan your learning accordingly. You should also take
-        this time to {renderCertificateText()}.
+          Если вы в настоящее время посещаете курсы, планируйте свое обучение соответствующим образом. Вам также следует использовать
+          это время для {renderCertificateText()}.
       </p>
       <p>
-        If you think this is an error or need help, {renderContactText()}.
+          Если вы считаете, что это ошибка или вам нужна помощь, {renderContactText()}.
       </p>
       <i>
-        Access expires on {moment(expirationDate).format('MMMM Do, YYYY')}.
+          Срок действия доступа истекает {moment(expirationDate).format('DD.MM.YYYY')}.
       </i>
     </>
   );
@@ -80,18 +81,18 @@ const SubscriptionExpirationModal = () => {
   const renderExpiredBody = () => (
     <>
       <p>
-        You company&#39;s access to your edX learning portal has expired. You will only have audit
-        access to the courses you were enrolled in with your subscription (courses from vouchers
-        will still be fully accessible).
+          Доступ вашей компании к учебному порталу ЦОПП СК истек. У вас будет только аудиторный
+          доступ к курсам, на которые вы были записаны по подписке (курсы из ваучеров
+          будут по-прежнему полностью доступны).
       </p>
       <p>
-        You can also {renderCertificateText()}.
+          Вы также можете {renderCertificateText()}.
       </p>
       <p>
-        If you think this is an error or need help, {renderContactText()}.
+          Если вы считаете, что это ошибка или вам нужна помощь, {renderContactText()}.
       </p>
       <i>
-        Access expired on {moment(expirationDate).format('MMMM Do, YYYY')}.
+          Срок действия доступа истекает {moment(expirationDate).format('DD.MM.YYYY')}.
       </i>
     </>
   );
@@ -101,7 +102,7 @@ const SubscriptionExpirationModal = () => {
   if (subscriptionExpired) {
     return (
       <Modal
-        dialogClassName={`${MODAL_DIALOG_CLASS_NAME} expired`}
+        dialogClassName={`${MODAL_DIALOG_CLASS_NAME} истек срок действия`}
         renderHeaderCloseButton={false}
         title={renderTitle()}
         body={renderExpiredBody()}

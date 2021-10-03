@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
@@ -23,10 +24,10 @@ import * as selectors from './data/selectors';
 import * as actions from './data/actions';
 
 export const COURSE_SECTION_TITLES = {
-  inProgress: 'My courses in progress',
-  upcoming: 'Upcoming courses',
-  completed: 'Completed courses',
-  savedForLater: 'Courses saved for later',
+  inProgress: 'Мои курсы в процессе обучения',
+  upcoming: 'Предстоящие курсы',
+  completed: 'Пройденные курсы',
+  savedForLater: 'Курсы, сохраненные на будущее',
 };
 
 export class CourseEnrollments extends Component {
@@ -70,7 +71,7 @@ export class CourseEnrollments extends Component {
             <FontAwesomeIcon className="mr-2" icon={faExclamationTriangle} />
           </div>
           <div>
-            An error occurred while retrieving your course enrollments. Please try again.
+              Произошла ошибка при получении данных о ваших записях на курсы. Пожалуйста, попробуйте еще раз.
           </div>
         </div>
       )}
@@ -113,7 +114,7 @@ export class CourseEnrollments extends Component {
               <FontAwesomeIcon className="mr-2" icon={faCheckCircle} />
             </div>
             <div>
-              Your course was moved to In Progress.
+                Ваш курс был перемещен в раздел "В процессе".
             </div>
           </div>
         )}
@@ -136,7 +137,7 @@ export class CourseEnrollments extends Component {
     } = this.props;
 
     if (isLoading) {
-      return <LoadingSpinner screenReaderText="loading course enrollments" />;
+      return <LoadingSpinner screenReaderText="загрузка зачисления на курс" />;
     }
     if (error) {
       return this.renderError();

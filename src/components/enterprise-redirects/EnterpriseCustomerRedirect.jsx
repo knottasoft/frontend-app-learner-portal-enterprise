@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import { AppContext } from '@edx/frontend-platform/react';
@@ -19,7 +20,7 @@ const EnterpriseCustomerRedirect = () => {
   if (isLoading) {
     return (
       <div className="py-5">
-        <LoadingSpinner screenReaderText="loading linked organizations" />
+        <LoadingSpinner screenReaderText="загрузка связанных организаций" />
       </div>
     );
   }

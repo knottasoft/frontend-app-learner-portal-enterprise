@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import classNames from 'classnames';
@@ -11,7 +12,7 @@ import {
   useCoursePriceForUserSubsidy,
 } from './data/hooks';
 
-export const INCLUDED_IN_SUBSCRIPTION_MESSAGE = 'Included in your subscription';
+export const INCLUDED_IN_SUBSCRIPTION_MESSAGE = 'Включено в вашу подписку';
 
 const CourseSidebarPrice = () => {
   const { state: courseData } = useContext(CourseContext);
@@ -30,7 +31,7 @@ const CourseSidebarPrice = () => {
   const showOrigPrice = !enterpriseConfig.hideCourseOriginalPrice;
   const crossedOutOriginalPrice = (
     <del>
-      <span className="sr-only">Priced reduced from:</span>${originalPriceDisplay} {currency}
+      <span className="sr-only">Цена снижена с:</span>${originalPriceDisplay} {currency}
     </del>
   );
 
@@ -63,11 +64,11 @@ const CourseSidebarPrice = () => {
         {showOrigPrice && <>{crossedOutOriginalPrice}{' '}</>}
         {coursePrice.discounted > 0 && (
           <>
-            <span className="sr-only">Discounted price:</span>${discountedPriceDisplay}
+            <span className="sr-only">Цена со скидкой:</span>${discountedPriceDisplay}
           </>
         )}
       </div>
-      <span>Sponsored by {enterpriseConfig.name}</span>
+      <span>Спонсируется {enterpriseConfig.name}</span>
     </>
   );
 };

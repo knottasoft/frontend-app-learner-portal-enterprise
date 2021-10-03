@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
@@ -39,7 +40,7 @@ export default function Dashboard() {
     </>
   );
 
-  const PAGE_TITLE = `Dashboard - ${enterpriseConfig.name}`;
+  const PAGE_TITLE = `Панель управления - ${enterpriseConfig.name}`;
 
   return (
     <>

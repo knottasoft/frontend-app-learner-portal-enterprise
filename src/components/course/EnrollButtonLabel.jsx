@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -28,7 +29,7 @@ const EnrollButtonLabel = ({
 }) => {
   // See https://openedx.atlassian.net/wiki/spaces/WS/pages/1045200922/Enroll+button+and+Course+Run+Selector+Logic
   // for more detailed documentation on the enroll button labeling based off course run states.
-  const DATE_FORMAT = 'MMM D, YYYY';
+  const DATE_FORMAT = 'DD.MM.YYYY';
   if (!isEnrollable) {
     const availabilityStates = [
       COURSE_AVAILABILITY_MAP.UPCOMING,
@@ -40,25 +41,25 @@ const EnrollButtonLabel = ({
   }
   if (!isUserEnrolled) {
     if (isUserEntitledForCourse({ userEntitlements, courseUuid })) {
-      return <span className="enroll-btn-label">View on Dashboard</span>;
+      return <span className="enroll-btn-label">Просмотр на панели управления</span>;
     }
     if (isCourseSelfPaced(pacingType)) {
       if (isCourseStarted && hasTimeToComplete(activeCourseRun) && !isArchived(activeCourseRun)) {
         return (
           <>
-            <span className="enroll-btn-label">Enroll</span>
-            <div><small>Starts {moment().format(DATE_FORMAT)}</small></div>
+            <span className="enroll-btn-label">Записаться</span>
+            <div><small>Начинается {moment().format(DATE_FORMAT)}</small></div>
           </>
         );
       }
-      return <span className="enroll-btn-label">Enroll</span>;
+      return <span className="enroll-btn-label">Записаться</span>;
     }
     return (
       <>
-        <span className="enroll-btn-label">Enroll</span>
+        <span className="enroll-btn-label">Записаться</span>
         <div>
           <small>
-            {isCourseStarted ? 'Started' : 'Starts'}
+            {isCourseStarted ? 'Запущено' : 'Начинается'}
             {' '}
             {moment(start).format(DATE_FORMAT)}
           </small>
@@ -67,9 +68,9 @@ const EnrollButtonLabel = ({
     );
   }
   if (isUserEnrolled && !isCourseStarted) {
-    return <span className="enroll-btn-label">You are Enrolled</span>;
+    return <span className="enroll-btn-label">Вы зачислены</span>;
   }
-  return <span className="enroll-btn-label">View Course</span>;
+  return <span className="enroll-btn-label">Просмотреть курс</span>;
 };
 
 EnrollButtonLabel.propTypes = {

@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { connectStateResults, Hits } from 'react-instantsearch-dom';
@@ -45,7 +46,7 @@ const SearchResults = ({
 
   const resultsHeading = useMemo(
     () => {
-      const resultsLabel = nbHits === 0 || nbHits > 1 ? 'results' : 'result';
+      const resultsLabel = nbHits === 0 || nbHits > 1 ? 'результаты' : 'результат';
       return (
         <>
           {nbHits} {resultsLabel}

@@ -1,3 +1,4 @@
+// TODO: Lang support
 import React, { useContext } from 'react';
 import { AppContext } from '@edx/frontend-platform/react';
 import { Hyperlink } from '@edx/paragon';
@@ -19,7 +20,7 @@ export default function CreatedBy() {
 
   return (
     <div className="mb-5">
-      <h3>Meet your instructors</h3>
+      <h3>Знакомство с инструкторами</h3>
       {partners.length > 0 && (
         <div className="row no-gutters mt-3">
           {partners.map(partner => (

@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -7,17 +8,17 @@ class Offer extends React.Component {
   renderTitle(usageType, benefitValue) {
     if (usageType === 'Percentage') {
       if (benefitValue === 100) {
-        return 'Enroll for free';
+        return 'Записаться бесплатно';
       }
-      return `Get ${benefitValue}% off`;
+      return `Получить скидку ${benefitValue}%`;
     }
-    return `Get $${benefitValue} off`;
+    return `Получить скидку ₽${benefitValue}`;
   }
 
   renderFinePrint(redemptionsRemaining, couponEndDate) {
-    let message = `Expires ${moment(couponEndDate).format('MMMM D, YYYY')}.`;
+    let message = `Истекает ${moment(couponEndDate).format('DD.MM.YYYY')}.`;
     if (redemptionsRemaining > 1) {
-      message = `You can use this ${redemptionsRemaining} more times. ${message}`;
+      message = `Вы можете использовать ${redemptionsRemaining} несколько раз. ${message}`;
     }
     return message;
   }

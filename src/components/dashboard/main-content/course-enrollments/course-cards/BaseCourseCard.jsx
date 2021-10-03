@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -36,8 +37,8 @@ class BaseCourseCard extends Component {
         onClick: this.handleEmailSettingsButtonClick,
         children: (
           <div role="menuitem">
-            Email settings
-            <span className="sr-only">for {title}</span>
+            Настройки электронной почты
+            <span className="sr-only">для {title}</span>
           </div>
         ),
       });
@@ -50,15 +51,15 @@ class BaseCourseCard extends Component {
 
   getDateMessage = () => {
     const { type, pacing, endDate } = this.props;
-    const formattedEndDate = endDate ? moment(endDate).format('MMMM D, YYYY') : null;
+    const formattedEndDate = endDate ? moment(endDate).format('DD.MM.YYYY') : null;
     let message = '';
     if (formattedEndDate) {
       switch (type) {
         case COURSE_STATUSES.inProgress: {
           if (pacing === 'self') {
-            message += `Complete at your own speed before ${formattedEndDate}.`;
+            message += `Выполняйте в своем темпе до ${formattedEndDate}.`;
           } else {
-            message += `Ends ${formattedEndDate}.`;
+            message += `Окончание: ${formattedEndDate}.`;
           }
           break;
         }
@@ -66,7 +67,7 @@ class BaseCourseCard extends Component {
         case COURSE_STATUSES.completed:
         case COURSE_STATUSES.savedForLater: {
           const isCourseEnded = moment() > moment(endDate);
-          message += isCourseEnded ? 'Ended' : 'Ends';
+          message += isCourseEnded ? 'Завершено' : 'Окончание';
           message += ` ${formattedEndDate}.`;
           break;
         }
@@ -83,9 +84,9 @@ class BaseCourseCard extends Component {
     const dateMessage = this.getDateMessage();
     let message = '';
     if (pacing) {
-      message += 'This course ';
-      message += isCourseEnded ? 'was ' : 'is ';
-      message += `${pacing}-paced. `;
+      message += 'Этот курс ';
+      message += isCourseEnded ? 'был расчитан' : 'расчитан ';
+      message += pacing === 'self' ? `на самостоятельную работу` : 'на работу с инструктором';
     }
     if (dateMessage) {
       message += dateMessage;
@@ -147,7 +148,7 @@ class BaseCourseCard extends Component {
             <Dropdown.Toggle variant="outline-dark">
               <FontAwesomeIcon icon={faCog} />
               <span className="sr-only">
-                course settings for {title}
+                настройки курса для {title}
               </span>
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -188,7 +189,7 @@ class BaseCourseCard extends Component {
   renderSponsoredByEnterpriseMessage = () => {
     const { enterpriseConfig: { name } } = this.context;
     if (name) {
-      return <small>Sponsored by {name}.</small>;
+      return <small>Спонсируется {name}.</small>;
     }
     return null;
   };
@@ -250,9 +251,9 @@ class BaseCourseCard extends Component {
     if (linkToCertificate) {
       return (
         <small className="mb-0">
-          View your certificate on
+          Просмотрите свой сертификат в
           {' '}
-          <a href={`${config.LMS_BASE_URL}/u/${username}`}>your profile →</a>
+          <a href={`${config.LMS_BASE_URL}/u/${username}`}>Вашем профиле →</a>
         </small>
       );
     }

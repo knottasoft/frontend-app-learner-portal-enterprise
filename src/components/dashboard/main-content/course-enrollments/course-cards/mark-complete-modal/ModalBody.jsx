@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 
 import ModalError from './ModalError';
@@ -13,16 +14,16 @@ const ModalBody = () => {
     <>
       {confirmError && <ModalError />}
       <p className="m-0">
-        Are you sure you want to save
+          Вы уверены, что хотите сохранить
         {' '}
         <a href={courseLink}>{courseTitle}</a>
         {' '}
-        for later? You will remain enrolled, but the course will
-        no longer appear as &quot;In Progress&quot;.
+          на будущее? Вы останетесь зачисленным, но курс
+          больше не будет отображаться как &quot;В процессе&quot;
       </p>
       <p className="mt-2">
-        As long as your license is valid, you can resume the course by clicking
-        &quot;Move course to In Progress&quot; under your list of courses saved for later.
+          Пока ваша лицензия действительна, вы можете возобновить курс, нажав кнопку
+          &quot;Переместить курс в "В работе&quot; в списке курсов, сохраненных на будущее.
       </p>
     </>
   );

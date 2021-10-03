@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AppContext } from '@edx/frontend-platform/react';
@@ -11,10 +12,10 @@ const DashboardMainContent = () => {
   return (
     <CourseEnrollments>
       {/* The children below will only be rendered if there are no course runs. */}
-      <h2>Find a Course</h2>
+      <h2>Найти курс</h2>
       <p>
-        You are not enrolled in any courses sponsored by {name}.
-        To start taking a course, browse the catalog below.
+          Вы не записаны ни на один курс, спонсируемый {name}.
+          Чтобы начать посещать курсы, просмотрите каталог ниже.
       </p>
       <p>
         <Button
@@ -22,7 +23,7 @@ const DashboardMainContent = () => {
           to={`/${slug}/search`}
           className="btn-brand-primary"
         >
-          Find a course
+            Найти курс
         </Button>
       </p>
     </CourseEnrollments>

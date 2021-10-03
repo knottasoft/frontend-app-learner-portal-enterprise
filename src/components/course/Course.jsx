@@ -1,3 +1,4 @@
+// TODO: Need translation
 import qs from 'query-string';
 import React, { useContext, useMemo } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
@@ -65,7 +66,7 @@ export default function Course() {
   if (!initialState) {
     return (
       <Container size="lg" className="py-5">
-        <LoadingSpinner screenReaderText="loading course" />
+        <LoadingSpinner screenReaderText="загрузка курса" />
       </Container>
     );
   }

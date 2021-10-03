@@ -1,3 +1,4 @@
+// TODO: Need translation
 import {
   useEffect, useState, useMemo, useContext,
 } from 'react';
@@ -86,9 +87,9 @@ export function useCoursePartners(course) {
     if (course?.owners) {
       setPartners(course.owners);
       if (course.owners.length > 1) {
-        setLabel('Institutions');
+        setLabel('Учреждения');
       } else {
-        setLabel('Institution');
+        setLabel('Учреждение');
       }
     }
   }, [course]);
@@ -104,9 +105,9 @@ export function useCourseRunWeeksToComplete(courseRun) {
     if (courseRun && courseRun.weeksToComplete) {
       setWeeksToComplete(courseRun.weeksToComplete);
       if (courseRun.weeksToComplete > 1 || courseRun.weeksToComplete === 0) {
-        setLabel('weeks');
+        setLabel('недели');
       } else {
-        setLabel('week');
+        setLabel('неделя');
       }
     }
   }, [courseRun]);
@@ -122,9 +123,9 @@ export function useCourseTranscriptLanguages(courseRun) {
     if (courseRun && courseRun.transcriptLanguages) {
       setLanguages(courseRun.transcriptLanguages);
       if (courseRun.transcriptLanguages.length > 1) {
-        setLabel('Video Transcripts');
+        setLabel('Расшифровка видео');
       } else {
-        setLabel('Video Transcript');
+        setLabel('Расшифровка видео');
       }
     }
   }, [courseRun]);
@@ -151,11 +152,11 @@ export function useCoursePacingType(courseRun) {
   const pacingTypeContent = useMemo(
     () => {
       if (pacingType === COURSE_PACING_MAP.INSTRUCTOR_PACED) {
-        return 'Instructor-led on a course schedule';
+        return 'Занятия с преподавателем по расписанию курса';
       }
 
       if (pacingType === COURSE_PACING_MAP.SELF_PACED) {
-        return 'Self-paced on your time';
+        return 'Самостоятельная работа в свободное время';
       }
 
       return undefined;

@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -25,8 +26,8 @@ export default function ContinueLearningButton({ linkToCourse, title, courseRunI
       href={linkToCourse}
       onClick={onClickHandler}
     >
-      Continue learning
-      <span className="sr-only">for {title}</span>
+      Продолжить обучение
+      <span className="sr-only">на {title}</span>
     </a>
   );
 }

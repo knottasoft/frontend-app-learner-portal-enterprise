@@ -1,3 +1,4 @@
+// TODO: Need translation
 import { useEffect, useState, useMemo } from 'react';
 import { camelCaseObject } from '@edx/frontend-platform/utils';
 import { logError } from '@edx/frontend-platform/logging';
@@ -32,8 +33,8 @@ export const useEnterpriseCustomerByUUID = (enterpriseUUID) => {
         })
         .catch((error) => {
           const errorMessage = (
-            `EnterpriseCustomerRedirect could not fetch metadata for 
-            enterprise customer (${enterpriseUUID}): ${error.message}`
+            `EnterpriseCustomerRedirect не смог получить метаданные для 
+            корпоративного клиента (${enterpriseUUID}): ${error.message}`
           );
           logError(errorMessage);
         })

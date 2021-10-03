@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext, useState, useRef } from 'react';
 import moment from 'moment';
 import { Button, Input } from '@edx/paragon';
@@ -29,7 +30,7 @@ export default function CourseRunSelector() {
           onClick={() => setEditing(true)}
           className="mb-2 p-0"
         >
-          more dates
+            другие даты
         </Button>
       );
     }
@@ -39,12 +40,12 @@ export default function CourseRunSelector() {
           name="courseRun"
           className="form-control-sm"
           type="select"
-          label="Start Date:"
+          label="Дата начала:"
           defaultValue={activeCourseRun.uuid}
           options={
             availableCourseRuns.map(({ start, uuid }) => (
               {
-                label: moment(start).format('MMM D, YYYY'),
+                label: moment(start).format('DD.MM.YYYY'),
                 value: uuid,
               }
             ))
@@ -56,7 +57,7 @@ export default function CourseRunSelector() {
           className="btn-brand-outline-primary btn-sm ml-2"
           onClick={() => handleClick()}
         >
-          go
+            перейти
         </Button>
       </div>
     );

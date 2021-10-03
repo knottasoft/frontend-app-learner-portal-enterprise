@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -29,7 +30,7 @@ export default function LicenseActivation() {
     );
   }
 
-  const PAGE_TITLE = `License Activation - ${enterpriseConfig.name}`;
+  const PAGE_TITLE = `Активация лицензии - ${enterpriseConfig.name}`;
   if (activationError) {
     return (
       <>
@@ -39,9 +40,9 @@ export default function LicenseActivation() {
             alertType="danger"
             dialog={(
               <>
-                We were unable to activate a license for this user.
-                {' '}Please double-check that you have a pending license and verify the email to which it was sent.
-                If you run into further issues, please {renderContactHelpText()} for assistance.
+                  Мы не смогли активировать лицензию для этого пользователя.
+                  {' '}Пожалуйста, проверьте наличие лицензии и проверьте электронную почту, на которую она была отправлена.
+                  Если у вас возникнут дополнительные проблемы, обратитесь за помощью в {renderContactHelpText()}.
               </>
             )}
             dismissible={false}

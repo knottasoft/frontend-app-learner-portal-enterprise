@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Hits, connectStateResults } from 'react-instantsearch-dom';
@@ -24,7 +25,7 @@ const PopularCourses = ({
           <Skeleton className="h2 d-block mb-3" width={240} />
         )}
         {!isSearchStalled && (
-          <>Popular Courses</>
+          <>Популярные курсы</>
         )}
       </h2>
       {isSearchStalled && (

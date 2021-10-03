@@ -1,11 +1,11 @@
+// TODO: Need translation
 import React from 'react';
 
 const ModalBody = () => (
   <div>
     <p className="m-0">
-      You are viewing only the edX courses that your organization has made available to you.
-      There may be other learning resources from different sources available in your learning
-      management system.
+        Вы просматриваете только те курсы ЦОПП СК, которые вам предоставила ваша организация.
+        В вашей системе управления обучением могут быть доступны и другие учебные ресурсы из разных источников.
     </p>
   </div>
 );

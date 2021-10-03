@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import { StatusAlert } from '@edx/paragon';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
@@ -16,11 +17,11 @@ const ModalError = () => {
             <FontAwesomeIcon className="mr-3" icon={faExclamationTriangle} />
           </div>
           <div>
-            An error occurred while unarchiving
+              Произошла ошибка при разрхивировании
             {' '}
             <a href={courseLink}>{courseTitle}</a>.
             {' '}
-            Please try again.
+              Пожалуйста, попробуйте еще раз.
           </div>
         </div>
       )}

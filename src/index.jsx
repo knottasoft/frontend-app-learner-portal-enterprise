@@ -12,6 +12,8 @@ import { mergeConfig } from '@edx/frontend-platform/config';
 
 import { App } from './components/app';
 
+import appMessages from './i18n';
+
 import './index.scss';
 
 subscribe(APP_READY, () => {
@@ -40,7 +42,9 @@ initialize({
       });
     },
   },
-  messages: [],
+  messages: [
+    appMessages
+  ],
   // We don't require authenticated users so that we can perform our own auth redirect to a proxy login that depends on
   // the route, rather than the LMS like frontend-platform does.
   requireAuthenticatedUser: false,

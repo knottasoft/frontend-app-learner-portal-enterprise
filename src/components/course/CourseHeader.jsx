@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext, useMemo } from 'react';
 import classNames from 'classnames';
 import { useLocation } from 'react-router-dom';
@@ -46,9 +47,9 @@ export default function CourseHeader() {
           className="mb-0"
           dialog={(
             <>
-              You were not enrolled in your selected course.
-              In order to enroll, you must accept the data sharing consent terms.
-              Please {renderContactHelpText()} for further information.
+                Вы не были зачислены на выбранный вами курс.
+                Чтобы записаться на курс, вы должны принять условия согласия на обмен данными.
+                Для получения дополнительной информации обратитесь к {renderContactHelpText()}.
             </>
           )}
           dismissible={false}
@@ -69,7 +70,7 @@ export default function CourseHeader() {
                 <Breadcrumb
                   links={[
                     {
-                      label: 'Find a Course',
+                      label: 'Найти курс',
                       url: `/${enterpriseConfig.slug}/search`,
                     },
                   ]}
@@ -112,19 +113,19 @@ export default function CourseHeader() {
                 <CourseRunSelector />
                 {isArchived(activeCourseRun) && (
                   <p className="font-weight-bold">
-                    Archived: Future Dates To Be Announced
+                      В архиве: Даты будущих событий будут объявлены
                   </p>
                 )}
                 <EnrollButton />
                 {defaultProgram && (
                   <p className="font-weight-bold mt-3 mb-0">
-                    This course is part of a {formatProgramType(defaultProgram.type)}.
+                      Этот курс является частью {formatProgramType(defaultProgram.type)}.
                   </p>
                 )}
               </>
             ) : (
               <p className="font-weight-bold mt-3 mb-0">
-                This course is not part of your company&apos;s curated course catalog.
+                  Этот курс не входит в каталог курсов вашей компании.
               </p>
             )}
           </div>

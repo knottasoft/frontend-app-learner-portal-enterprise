@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useCallback } from 'react';
 import { StatusAlert } from '@edx/paragon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,9 +12,9 @@ const SearchError = () => {
           <FontAwesomeIcon icon={faExclamationTriangle} size="2x" />
         </div>
         <div>
-          An error occured while finding courses that match your search.
+            При поиске курсов, соответствующих вашему запросу, произошла ошибка.
           <br />
-          Please try again later.
+            Пожалуйста, повторите попытку позже.
         </div>
       </div>
     ),

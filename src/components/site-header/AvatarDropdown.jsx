@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
@@ -19,8 +20,8 @@ const AvatarDropdown = ({ showLabel }) => {
         style={{ maxWidth: 280 }}
         alignRight
       >
-        <Dropdown.Header className="text-uppercase">Switch Dashboard</Dropdown.Header>
-        <Dropdown.Item href={`${LMS_BASE_URL}/dashboard`}>Personal</Dropdown.Item>
+        <Dropdown.Header className="text-uppercase">Переключить панель управления</Dropdown.Header>
+        <Dropdown.Item href={`${LMS_BASE_URL}/dashboard`}>Личный</Dropdown.Item>
         {/* TODO: support multiple enterprises! */}
         <Dropdown.Item
           as={NavLink}
@@ -34,11 +35,11 @@ const AvatarDropdown = ({ showLabel }) => {
           {enterpriseConfig.name}
         </Dropdown.Item>
         <Dropdown.Divider className="border-light" />
-        <Dropdown.Item href={`${LMS_BASE_URL}/u/${authenticatedUser.username}`}>My profile</Dropdown.Item>
-        <Dropdown.Item href={`${LMS_BASE_URL}/account/settings`}>Account settings</Dropdown.Item>
-        <Dropdown.Item href="https://support.edx.org/hc/en-us">Help</Dropdown.Item>
+        <Dropdown.Item href={`${LMS_BASE_URL}/u/${authenticatedUser.username}`}>Мой профиль</Dropdown.Item>
+        <Dropdown.Item href={`${LMS_BASE_URL}/account/settings`}>Настройки аккаунта</Dropdown.Item>
+        <Dropdown.Item href="https://support.edx.org/hc/en-us">Помощь</Dropdown.Item>
         <Dropdown.Divider className="border-light" />
-        <Dropdown.Item href={`${LOGOUT_URL}?next=${BASE_URL}${enterpriseDashboardLink}`}>Sign out</Dropdown.Item>
+        <Dropdown.Item href={`${LOGOUT_URL}?next=${BASE_URL}${enterpriseDashboardLink}`}>Выйти</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

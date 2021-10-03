@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
@@ -25,7 +26,7 @@ export default function EnterprisePage({ children, useEnterpriseConfigCache }) {
   if (!isDefined([enterpriseConfig, profileImage])) {
     return (
       <Container className="py-5">
-        <LoadingSpinner screenReaderText="loading organization details" />
+        <LoadingSpinner screenReaderText="загрузка реквизитов организации" />
       </Container>
     );
   }

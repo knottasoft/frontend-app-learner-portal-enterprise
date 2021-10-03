@@ -1,22 +1,23 @@
+// TODO: Need translation
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Modal } from '@edx/paragon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
-export const ENROLL_MODAL_TEXT_NO_OFFERS = 'Your organization has not provided you with access to courses, but you may still enroll in this course after payment.';
-export const createUseVoucherText = offersCount => `Enrolling in this course will use 1 of your ${offersCount} enrollment codes.`;
+export const ENROLL_MODAL_TEXT_NO_OFFERS = 'Ваша организация не предоставила вам доступ к курсам, но вы все равно можете записаться на этот курс после оплаты.';
+export const createUseVoucherText = offersCount => `При регистрации на этот курс будет использован 1 из ваших кодов регистрации ${offersCount}.`;
 
 export const modalText = {
   noOffers: {
     body: ENROLL_MODAL_TEXT_NO_OFFERS,
-    button: 'Continue to payment',
-    title: 'Payment required for course enrollment',
+    button: 'Продолжить оплату',
+    title: 'Оплата требуется для зачисления на курс',
   },
   fullOffers: {
     body: (offersCount) => createUseVoucherText(offersCount),
-    button: 'Enroll in course',
-    title: 'Use 1 enrollment code for this course?',
+    button: 'Записаться на курс',
+    title: 'Использовать 1 код регистрации для этого курса?',
   },
 };
 

@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Modal, StatefulButton } from '@edx/paragon';
@@ -8,8 +9,8 @@ import MarkCompleteModalContext from './MarkCompleteModalContext';
 import ModalBody from './ModalBody';
 import { updateCourseCompleteStatusRequest } from './data/service';
 
-export const MARK_SAVED_FOR_LATER_DEFAULT_LABEL = 'Save course for later';
-export const MARK_SAVED_FOR_LATER_PENDING_LABEL = 'Saving course for later...';
+export const MARK_SAVED_FOR_LATER_DEFAULT_LABEL = 'Сохранить курс на будущее';
+export const MARK_SAVED_FOR_LATER_PENDING_LABEL = 'Сохраняю курс на будущее...';
 
 const initialState = {
   confirmButtonState: 'default',
@@ -74,7 +75,7 @@ const MarkCompleteModal = ({
       }}
     >
       <Modal
-        title="Save course for later"
+        title="Сохранить курс на будущее"
         body={<ModalBody />}
         buttons={[
           <StatefulButton
@@ -91,7 +92,7 @@ const MarkCompleteModal = ({
         ]}
         open={isOpen && !confirmSuccessful}
         onClose={handleModalOnClose}
-        closeText="Cancel"
+        closeText="Отменить"
       />
     </MarkCompleteModalContext.Provider>
   );

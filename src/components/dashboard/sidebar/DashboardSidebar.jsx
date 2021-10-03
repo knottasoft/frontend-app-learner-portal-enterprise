@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext, useMemo } from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
@@ -11,9 +12,9 @@ import SidebarCard from './SidebarCard';
 import { UserSubsidyContext } from '../../enterprise-user-subsidy';
 import { LICENSE_STATUS } from '../../enterprise-user-subsidy/data/constants';
 
-export const CATALOG_ACCESS_CARD_BUTTON_TEXT = 'Find a course';
-export const NEED_HELP_BLOCK_TITLE = 'Need help?';
-export const EMAIL_MESSAGE = 'contact your organization\'s edX administrator';
+export const CATALOG_ACCESS_CARD_BUTTON_TEXT = 'Найти курс';
+export const NEED_HELP_BLOCK_TITLE = 'Нужна помощь?';
+export const EMAIL_MESSAGE = 'свяжитесь с администратором вашей организации';
 
 const DashboardSidebar = () => {
   const {
@@ -82,11 +83,11 @@ const DashboardSidebar = () => {
         className="mb-5"
       >
         <p>
-          For technical support, visit the{' '}
-          <a href="https://support.edx.org/hc/en-us">edX Help Center</a>.
+          Для получения технической поддержки посетите{' '}
+          <a href="https://support.edx.org/hc/en-us">Справочный центр ЦОПП СК</a>.
         </p>
         <p>
-          To request more benefits or specific courses, {renderContactHelpText()}.
+          Чтобы запросить дополнительные льготы или конкретные курсы, {renderContactHelpText()}.
         </p>
       </SidebarBlock>
     </div>

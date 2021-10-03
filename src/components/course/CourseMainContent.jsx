@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import MediaQuery from 'react-responsive';
 import { breakpoints, Hyperlink } from '@edx/paragon';
@@ -18,12 +19,12 @@ function formatSponsorTextList(sponsors) {
   }
 
   if (names.length === 2) {
-    sponsorTextList = names.join(' and ');
+    sponsorTextList = names.join(' и ');
   }
 
   if (names.length > 2) {
     const lastName = names.pop();
-    sponsorTextList = `${names.join(', ')}, and ${lastName}`;
+    sponsorTextList = `${names.join(', ')}, и ${lastName}`;
   }
 
   return sponsorTextList;
@@ -47,8 +48,8 @@ export default function CourseMainContent() {
         <PreviewExpand
           className="mb-5"
           cta={{
-            labelToExpand: 'More about this course',
-            labelToMinimize: 'Collapse about this course',
+            labelToExpand: 'Подробнее об этом курсе',
+            labelToMinimize: 'Свернить подробности об этом курсе',
             id: 'about-this-course',
           }}
           heading={<h3>About this course</h3>}
@@ -84,8 +85,8 @@ export default function CourseMainContent() {
             ))}
           </div>
           <p>
-            The production of this course would not have been possible without the
-            generous contributions of {formatSponsorTextList(course.sponsors)}.
+            Создание этого курса было бы невозможным без
+            щедрого вклада {formatSponsorTextList(course.sponsors)}.
           </p>
         </div>
       )}
@@ -93,11 +94,11 @@ export default function CourseMainContent() {
         <PreviewExpand
           className="mb-5"
           cta={{
-            labelToExpand: 'Expand what you\'ll learn',
-            labelToMinimize: 'Collapse what you\'ll learn',
+            labelToExpand: 'Подробнее о том, что узнаете',
+            labelToMinimize: 'Свернуть о том, что узнаете',
             id: 'what-youll-learn',
           }}
-          heading={<h3>What you&apos;ll learn</h3>}
+          heading={<h3>Чему вы научитесь</h3>}
         >
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: course.outcome }} />
@@ -107,11 +108,11 @@ export default function CourseMainContent() {
         <PreviewExpand
           className="mb-5"
           cta={{
-            labelToExpand: 'Expand syllabus',
-            labelToMinimize: 'Collapse syllabus',
+            labelToExpand: 'Развернуть учебный план',
+            labelToMinimize: 'Свернуть учебный план',
             id: 'course-syllabus',
           }}
-          heading={<h3>Syllabus</h3>}
+          heading={<h3>Учебный план</h3>}
         >
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: course.syllabusRaw }} />
@@ -123,14 +124,14 @@ export default function CourseMainContent() {
       )}
       {course.learnerTestimonials && (
         <div className="mb-5">
-          <h3>Learner testimonials</h3>
+          <h3>Отзывы обучающихся</h3>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: course.learnerTestimonials }} />
         </div>
       )}
       {course.faq && (
         <div className="mb-5">
-          <h3>Frequently asked questions</h3>
+          <h3>Часто задаваемые вопросы</h3>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: course.faq }} />
         </div>
@@ -141,20 +142,21 @@ export default function CourseMainContent() {
           <div dangerouslySetInnerHTML={{ __html: course.additionalInformation }} />
         </div>
       )}
-      {activeCourseRun.hasOfacRestrictions && (
-        <div className="mb-5">
-          <h3>Who can take this course?</h3>
-          <p>
-            Unfortunately, learners from one or more of the following countries or regions will not
-            be able to register for this course: Iran, Cuba and the Crimea region of Ukraine.
-            While edX has sought licenses from the U.S. Office of Foreign Assets Control (OFAC) to
-            offer our courses to learners in these countries and regions, the licenses we have
-            truly regrets that U.S. sanctions prevent us from offering all of our courses to
-            received are not broad enough to allow us to offer this course in all locations. EdX
-            everyone, no matter where they live.
-          </p>
-        </div>
-      )}
+      {/*// TODO: Условия прохождения курса из санкционного списка США*/}
+      {/*{activeCourseRun.hasOfacRestrictions && (*/}
+      {/*  <div className="mb-5">*/}
+      {/*    <h3>Кто может пройти этот курс?</h3>*/}
+      {/*    <p>*/}
+      {/*      Unfortunately, learners from one or more of the following countries or regions will not*/}
+      {/*      be able to register for this course: Iran, Cuba and the Crimea region of Ukraine.*/}
+      {/*      While edX has sought licenses from the U.S. Office of Foreign Assets Control (OFAC) to*/}
+      {/*      offer our courses to learners in these countries and regions, the licenses we have*/}
+      {/*      truly regrets that U.S. sanctions prevent us from offering all of our courses to*/}
+      {/*      received are not broad enough to allow us to offer this course in all locations. EdX*/}
+      {/*      everyone, no matter where they live.*/}
+      {/*    </p>*/}
+      {/*  </div>*/}
+      {/*)}*/}
     </>
   );
 }

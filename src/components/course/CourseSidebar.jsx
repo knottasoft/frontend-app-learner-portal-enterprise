@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import {
@@ -44,22 +45,22 @@ export default function CourseSidebar() {
             {hasTruthyValue(activeCourseRun.weeksToComplete) && (
               <CourseSidebarListItem
                 icon={faClock}
-                label="Length"
+                label="Продолжительность"
                 content={`${weeksToComplete} ${weeksLabel}`}
               />
             )}
             {hasTruthyValue([activeCourseRun.minEffort, activeCourseRun.maxEffort]) && (
               <CourseSidebarListItem
                 icon={faTachometerAlt}
-                label="Effort"
-                content={`${activeCourseRun.minEffort}-${activeCourseRun.maxEffort} hours per week`}
+                label="Нагрузка"
+                content={`${activeCourseRun.minEffort}-${activeCourseRun.maxEffort} часов в неделю`}
               />
             )}
           </>
         )}
         <CourseSidebarListItem
           icon={faTag}
-          label="Price"
+          label="Цена"
           content={<CourseSidebarPrice />}
         />
         {partners?.length > 0 && (
@@ -86,7 +87,7 @@ export default function CourseSidebar() {
         {primarySubject && (
           <CourseSidebarListItem
             icon={faGraduationCap}
-            label="Subject"
+            label="Предмет"
             content={(
               <Hyperlink
                 destination={primarySubject.url}
@@ -105,14 +106,14 @@ export default function CourseSidebar() {
         {activeCourseRun.levelType && (
           <CourseSidebarListItem
             icon={faCertificate}
-            label="Level"
+            label="Уровень"
             content={course.levelType}
           />
         )}
         {activeCourseRun.contentLanguage && (
           <CourseSidebarListItem
             icon={faUniversity}
-            label="Language"
+            label="Язык"
             content={ISO6391.getNativeName(activeCourseRun.contentLanguage.slice(0, 2))}
           />
         )}
@@ -128,7 +129,7 @@ export default function CourseSidebar() {
         {pacingType && (
           <CourseSidebarListItem
             icon={faUser}
-            label="Course Type"
+            label="Тип курса"
             content={pacingTypeContent}
           />
         )}

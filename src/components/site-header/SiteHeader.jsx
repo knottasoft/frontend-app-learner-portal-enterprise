@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import Responsive from 'react-responsive';
 import { Link, NavLink } from 'react-router-dom';
@@ -31,10 +32,10 @@ export default function SiteHeader() {
     return (
       <>
         <NavLink to={`/${enterpriseConfig.slug}`} className={mainMenuLinkClassName} exact>
-          Dashboard
+          Панель управления
         </NavLink>
         <NavLink to={`/${enterpriseConfig.slug}/search`} className={mainMenuLinkClassName} exact>
-          Find a Course
+          Найти курс
         </NavLink>
       </>
     );
@@ -50,7 +51,7 @@ export default function SiteHeader() {
           </nav>
           <nav aria-label="Secondary" className="nav secondary-menu-container align-items-center ml-auto">
             <a href="https://support.edx.org/hc/en-us" className="text-gray-700 mr-3">
-              Help
+              Помощь
             </a>
             <AvatarDropdown />
           </nav>
@@ -60,7 +61,7 @@ export default function SiteHeader() {
   );
 
   const renderMobileHeader = () => {
-    const mainMenuTitle = 'Main Menu';
+    const mainMenuTitle = 'Главное меню';
     return (
       <header
         aria-label="Main"

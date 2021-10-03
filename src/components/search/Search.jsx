@@ -1,3 +1,4 @@
+// TODO: Need translation
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import algoliasearch from 'algoliasearch/lite';
@@ -30,7 +31,7 @@ const Search = () => {
     config.ALGOLIA_SEARCH_API_KEY,
   );
 
-  const PAGE_TITLE = `Search courses - ${enterpriseConfig.name}`;
+  const PAGE_TITLE = `Поиск курсов - ${enterpriseConfig.name}`;
 
   return (
     <>
